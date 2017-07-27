@@ -1,0 +1,15 @@
+CREATE database nacho;
+use nacho;
+CREATE TABLE alumno (
+	nombre varchar(50) not null,
+	apellido varchar(50) not null,
+	edad int not null,
+	legajo int primary key auto_increment
+);
+INSERT INTO alumno VALUES("Ignacio", "Vila", 21, 38425064);
+INSERT INTO alumno(nombre, apellido, edad, legajo) VALUES ("Juan", "Rodrigues", 78, 12345678);
+SELECT * FROM alumno;
+UPDATE alumno set nombre = "Nacho" where legajo = 38425064;
+DELETE FROM alumno where lejao = 12345678;
+DROP TABLE alumno;
+ALTER TABLE alumno ADD COLUMN direccion varchar(100);
